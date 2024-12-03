@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+
+    <h1>
+        Contacts
+    </h1>
+
+    <a href="/">Add another contact</a>
+    
+    <hr>
+
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Postal Code
+            </th>
+            <th>
+                Phone Number
+            </th>
+        </tr>
+
+        <tr data-th-each="contact : ${contacts}" data-th-object="${contact}">
+            <td>
+                <span data-th-text="*{fullName}"></span>
+            </td>
+            <td>
+                <span data-th-text="*{email}"></span>
+            </td>
+            <td>
+                <span data-th-text="*{postalCode}"></span>
+            </td>
+            <td>
+                <span data-th-text="*{phoneNumber}"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
